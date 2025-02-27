@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:fruit_market/core/utils/size_config.dart';
+import 'package:fruit_market/core/widgets/space_widget.dart';
 
 class PageViewItem extends StatelessWidget {
   const PageViewItem({Key? key, this.title, this.subTitle, this.image});
@@ -11,16 +12,16 @@ class PageViewItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        // const VerticalSpace(18),
+        const VerticalSpace(19),
         SizedBox(
-          height: SizeConfig.defalutSize! * 25,
+          height: SizeConfig.defalutSize! * 15,
           child: Image.asset(
             image!,
             height: 50,
-            width: 200,
+            width: 300,
           ),
         ),
-        // const VerticalSpace(2.5),
+        const VerticalSpace(2),
         Text(
           title!,
           style: TextStyle(
@@ -30,7 +31,7 @@ class PageViewItem extends StatelessWidget {
           ),
           textAlign: TextAlign.left,
         ),
-        // const VerticalSpace(1),
+        const VerticalSpace(1.5),
         Text(
           subTitle!,
           style: TextStyle(
